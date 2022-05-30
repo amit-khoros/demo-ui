@@ -1,15 +1,30 @@
 import React from 'react';
+import styled from 'styled-components/macro';
 
 import ChatShell from 'components/chatShell/ChatShell';
 import Scheduler from 'containers/Scheduler';
 
+const FlexBox = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`;
+
+
 const Home = () => {
   return (
-    <div>
+    <FlexBox>
         <ChatShell>
             <Scheduler />
         </ChatShell>
-    </div>
+        <ChatShell>
+        {
+          /**
+          * 
+          * custom component
+          */
+        }
+        </ChatShell>
+    </FlexBox>
   )
 };
 

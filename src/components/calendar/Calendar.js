@@ -140,12 +140,17 @@ const Day = ({ month, handleClick }) => {
             year
         };
         
-        let { highlight, active } = getStyles({departureDate, returnDate, currentDate, isRoundTrip});
-
+        const { highlight, active } = getStyles({departureDate, returnDate, currentDate, isRoundTrip});
+        const _handleClick = () => {
+            if(!disabled) {
+                handleClick({date, month, year})
+            }
+        };
+ 
         return (
             <DayBox 
                 key= {date+''+year}
-                onClick= {() => handleClick({date, month, year})}
+                onClick= {_handleClick}
                 highlight= {highlight}
                 active= {active}
                 disabled= {disabled}
