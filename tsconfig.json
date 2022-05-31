@@ -19,12 +19,13 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "baseUrl": "src",
-    "paths": {
-      "*": ["src/*"]
-    }
+    "baseUrl": "src/",
+    // to ask why we are using path in tsConfig.json
+    // "paths": {
+    //   "*": ["src/*"]
+    // }
   },
   "include": [
-    "src"
+    "src","types"
   ]
 }

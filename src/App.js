@@ -17,6 +17,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/kroo/scheduler" element={<Scheduler />} />
         <Route path="*" element={<Home />} />
+        <Route path="/kroo/" element={<Scheduler />} />
+
       </Routes>
     </Container>
   );
