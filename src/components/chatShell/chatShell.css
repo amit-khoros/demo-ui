@@ -48,6 +48,9 @@ section {
 .section-body {
     margin-top: 10px;
     padding: 20px 25px;
+    height: 450px;
+    overflow-y: scroll;
+    
 }
 
 .overlay {
