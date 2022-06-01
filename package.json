@@ -25,7 +25,8 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": ["airbnb", "prettier", "plugin:jsx-a11y/recommended"],
+    "extends": ["react-app",
+      "react-app/jest"],
     "settings": {
       "import/resolver": {
         "node": {
