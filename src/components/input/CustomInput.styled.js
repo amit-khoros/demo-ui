@@ -45,7 +45,7 @@ export const StyledInput = styled.div`
      font-size: '16px';
      padding: 12px 16px 0 10px;
      outline: 0;
-     width: ${props => props?.children[0]?.props?.width||""};
+     width: ${props => props?.children[0]?.props.width||""};
      color: #a0a0a0;
       border: 1px solid #E0E2E3;
       background-color: white;

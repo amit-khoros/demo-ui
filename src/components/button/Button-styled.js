@@ -5,6 +5,7 @@ export const CustomButton = styled.button`
 font-size: 1em;
 margin: 1em;
 padding: 0.75em 2em;
+width:${props => props.width || ""};
 border-radius: ${props => props.radius || "4px"};
 cursor: pointer;
 color: ${props => props.color || "#FFFFFF"};
