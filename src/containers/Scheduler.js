@@ -10,9 +10,9 @@ const Scheduler = () => {
     const setDatesFnc = ({date, month, year}) => {
 
         if(isRoundTrip && departureDate.date && !returnDate.date) {
-          //  const departureMilliSeconds = new Date(departureDate.year, departureDate.month, departureDate.date).getTime();
-           // const returnMilliSeconds = new Date(returnDate.year, returnDate.month, returnDate.date).getTime();
-           // if(returnMilliSeconds > departureMilliSeconds) {
+           const departureMilliSeconds = new Date(departureDate.year, departureDate.month, departureDate.date).getTime();
+           const returnMilliSeconds = new Date(year, month, date).getTime();
+           if(returnMilliSeconds > departureMilliSeconds) {
                 const returnDates = {
                     ...returnDate,
                     date, 
@@ -20,7 +20,15 @@ const Scheduler = () => {
                     year
                 };
                 setReturnDate(returnDates);
-         //   }
+            } else {
+                const departureDates = {
+                    ...departureDate,
+                    date, 
+                    month, 
+                    year
+                }
+                setDepatureDate(departureDates);
+            }
         } else {
             const departureDates = {
                 ...departureDate,
