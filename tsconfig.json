@@ -20,10 +20,6 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "baseUrl": "src/",
-    // to ask why we are using path in tsConfig.json
-    // "paths": {
-    //   "*": ["src/*"]
-    // }
   },
   "include": [
     "src","types"
