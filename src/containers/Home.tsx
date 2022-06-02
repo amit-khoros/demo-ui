@@ -11,6 +11,7 @@ import { SCHEDULER_PATH,PAYMENT_PATH, CAROUSEL_PATH } from 'constants/routes';
 const FlexBox = styled.div`
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
 `;
 
 

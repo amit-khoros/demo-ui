@@ -1,7 +1,7 @@
 .container {
     width: 440px;
     margin-right: 50px;
-    margin-bottom: 60px;
+    margin: 45px 0 45px 0;
 }
 
 .chat-shell {
@@ -71,11 +71,16 @@ section {
     display: flex;
     border: 1px solid #d4d5d9;
     margin-top: 30px;
+    border-radius: 15px;
 }
 
 .img-holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 40px;
     border-right: 1px solid #d4d5d9;
+    color: #1a73e8;
 }
 
 .url-holder {
@@ -89,6 +94,9 @@ section {
     background: #1a73e8;
     color: #fff;
     cursor: pointer;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
 }
 
 .copied {

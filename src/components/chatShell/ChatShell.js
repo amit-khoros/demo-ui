@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaCopy } from "react-icons/fa";
 
 import './chatShell.css';
 
@@ -23,7 +24,7 @@ const ChatShell = ({ children, url, identity, selectedChatShell, handleChatShell
           <div className='overlay' />
       </div>
       <div className="clipboard">
-        <div className="img-holder" />
+        <div className="img-holder"><FaCopy /></div>
         <p className="url-holder">{urlPath}</p>
         <button className={buttonStyles} onClick={handleClipboard}>{buttonText}</button>
       </div>
