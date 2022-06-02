@@ -3,8 +3,8 @@ import styled from 'styled-components/macro';
 
 import ChatShell from 'components/chatShell/ChatShell';
 import Scheduler from 'containers/Scheduler';
-import { SCHEDULER_PATH } from 'constants/routes';
-
+import { SCHEDULER_PATH,DESTINATION_RESTAURANTS } from 'constants/routes';
+import Maps from 'components/restaurants/Restaurants';
 const FlexBox = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -29,16 +29,12 @@ const Home = () => {
             <Scheduler />
         </ChatShell>
         <ChatShell 
+          url={DESTINATION_RESTAURANTS }
           handleChatShellIdentity={handleChatShellIdentity} 
           selectedChatShell={chatShellIdentity} 
           identity={2}
         >
-        {
-          /**
-          * 
-          * custom component
-          */
-        }
+       <Maps/>
         </ChatShell>
     </FlexBox>
   )
