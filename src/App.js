@@ -4,6 +4,7 @@ import styled from 'styled-components/macro';
 
 import Home from 'containers/Home';
 import Scheduler from 'containers/Scheduler';
+import { SCHEDULER_PATH } from 'constants/routes';
 
 const Container = styled.div`
   display: flex;
@@ -15,7 +16,7 @@ function App() {
     <Container>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/kroo/scheduler" element={<Scheduler />} />
+        <Route path={SCHEDULER_PATH} element={<Scheduler />} />
         <Route path="*" element={<Home />} />
       </Routes>
     </Container>
