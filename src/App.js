@@ -5,9 +5,9 @@ import Home from 'containers/Home';
 import Scheduler from 'containers/Scheduler';
 import PaymentScreen from 'containers/PaymentScreens';
 import CarouselScreen from 'containers/CaraouselScreen';
+import Weatherapi from 'components/weather/Weather';
 
-
-import { SCHEDULER_PATH,PAYMENT_PATH ,CAROUSEL_PATH} from 'constants/routes';
+import { SCHEDULER_PATH,PAYMENT_PATH ,CAROUSEL_PATH,WEATHER_PATH} from 'constants/routes';
 
 const Container = styled.div`
   display: flex;
@@ -23,6 +23,7 @@ function App() {
         <Route path="*" element={<Home />} />
         <Route path={PAYMENT_PATH} element={<PaymentScreen/>} />
         <Route path={CAROUSEL_PATH} element={<CarouselScreen/>} />
+        <Route path={WEATHER_PATH} element={<Weatherapi/>} />
 
       </Routes>
     </Container>
