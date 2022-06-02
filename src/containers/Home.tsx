@@ -1,12 +1,10 @@
 import React from 'react';
-import styled, { ThemeProvider } from 'styled-components/macro';
+import styled from 'styled-components/macro';
 import ChatShell from 'components/chatShell/ChatShell';
-import Carousel, { CarouselItem } from 'components/carousel/Carousel'
 import Scheduler from 'containers/Scheduler';
 import PaymentScreen from 'containers/PaymentScreens';
 import CarouselScreen from 'containers/CaraouselScreen'
 import 'components/carousel/Carousel.css';
-import { CustomButton,Container } from 'components/button/Button-styled';
 
 
 const FlexBox = styled.div`
