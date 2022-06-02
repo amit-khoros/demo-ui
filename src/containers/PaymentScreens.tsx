@@ -1,12 +1,9 @@
 import React, { useState } from 'react';
 import CustomInput from "components/input/CustomInput";
-import { CustomButton } from 'components/button/Button-styled';
+import { CustomButton,Container } from 'components/button/Button-styled';
 import styled from 'styled-components/macro';
 
-const Container = styled.div`
-  display: flex;
-  justify-content: center;
-`;
+
 
 interface IProps {
 }
