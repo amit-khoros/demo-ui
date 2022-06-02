@@ -1,11 +1,13 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import styled from 'styled-components/macro';
-
 import Home from 'containers/Home';
 import Scheduler from 'containers/Scheduler';
 import PaymentScreen from 'containers/PaymentScreens';
+import CarouselScreen from 'containers/CaraouselScreen';
 
+
+import { SCHEDULER_PATH,PAYMENT_PATH ,CAROUSEL_PATH} from 'constants/routes';
 
 const Container = styled.div`
   display: flex;
@@ -17,9 +19,11 @@ function App() {
     <Container>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/kroo/scheduler" element={<Scheduler />} />
+        <Route path={SCHEDULER_PATH} element={<Scheduler />} />
         <Route path="*" element={<Home />} />
-        <Route path="/kroo/payment" element={<PaymentScreen/>} />
+        <Route path={PAYMENT_PATH} element={<PaymentScreen/>} />
+        <Route path={CAROUSEL_PATH} element={<CarouselScreen/>} />
+
       </Routes>
     </Container>
   );
