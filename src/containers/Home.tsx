@@ -5,8 +5,8 @@ import Scheduler from 'containers/Scheduler';
 import PaymentScreen from 'containers/PaymentScreens';
 import CarouselScreen from 'containers/CaraouselScreen'
 import 'components/carousel/Carousel.css';
-
-import { SCHEDULER_PATH,PAYMENT_PATH, CAROUSEL_PATH } from 'constants/routes';
+import Weatherapi from 'components/weather/Weather';
+import { SCHEDULER_PATH,PAYMENT_PATH, CAROUSEL_PATH,WEATHER_PATH } from 'constants/routes';
 
 const FlexBox = styled.div`
   display: flex;
@@ -57,17 +57,12 @@ type Props = IProps;
         </ChatShell> 
          
         <ChatShell 
-          url={""}
+          url={WEATHER_PATH}
           handleChatShellIdentity={handleChatShellIdentity} 
           selectedChatShell={chatShellIdentity} 
           identity={2}
         >
-        {
-          /**
-          * 
-          * custom component
-          */
-        }
+          <Weatherapi/>
         </ChatShell>
     </FlexBox>
   )
