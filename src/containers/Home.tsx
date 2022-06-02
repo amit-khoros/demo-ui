@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import styled from 'styled-components/macro';
-
 import ChatShell from 'components/chatShell/ChatShell';
 import Scheduler from 'containers/Scheduler';
-import { SCHEDULER_PATH } from 'constants/routes';
+import PaymentScreen from 'containers/PaymentScreens';
+import CarouselScreen from 'containers/CaraouselScreen'
+import 'components/carousel/Carousel.css';
+
+import { SCHEDULER_PATH,PAYMENT_PATH, CAROUSEL_PATH } from 'constants/routes';
 
 const FlexBox = styled.div`
   display: flex;
@@ -11,10 +14,15 @@ const FlexBox = styled.div`
 `;
 
 
-const Home = () => {
+interface IProps {
+}
+
+type Props = IProps;
+
+  const Home: React.FC<Props> = () => {
   const [chatShellIdentity, setChatShellIdentity] = useState(0);
 
-  const handleChatShellIdentity = (num) => {
+  const handleChatShellIdentity = (num: React.SetStateAction<number>) => {
     setChatShellIdentity(num)
   }
 
@@ -28,7 +36,28 @@ const Home = () => {
         >
             <Scheduler />
         </ChatShell>
+        <ChatShell
+        url={PAYMENT_PATH}
+        identity={3}
+        handleChatShellIdentity={handleChatShellIdentity} 
+        selectedChatShell={chatShellIdentity} 
+
+        >
+         <PaymentScreen/>
+        </ChatShell>   
+        <ChatShell
+        url={CAROUSEL_PATH}
+        identity={4}
+        handleChatShellIdentity={handleChatShellIdentity} 
+        selectedChatShell={chatShellIdentity} 
+        >
+          
+        
+         <CarouselScreen/>
+        </ChatShell> 
+         
         <ChatShell 
+          url={""}
           handleChatShellIdentity={handleChatShellIdentity} 
           selectedChatShell={chatShellIdentity} 
           identity={2}

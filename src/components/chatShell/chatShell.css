@@ -50,7 +50,10 @@ section {
 
 .section-body {
     margin-top: 10px;
-    padding: 20px 25px;
+    padding: 20px 20px;
+    height: 450px;
+    overflow-y: scroll;
+    
 }
 
 .overlay {
