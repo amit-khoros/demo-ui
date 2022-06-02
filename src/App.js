@@ -11,6 +11,7 @@ import { SCHEDULER_PATH,PAYMENT_PATH ,CAROUSEL_PATH,WEATHER_PATH,RESTAURANTS_PAT
 
 const Container = styled.div`
   display: flex;
+  justify-content: center;
   padding: 50px;
 `;
 

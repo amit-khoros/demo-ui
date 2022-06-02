@@ -10,9 +10,9 @@ import { SCHEDULER_PATH,PAYMENT_PATH, CAROUSEL_PATH,WEATHER_PATH, RESTAURANTS_PA
 import Restaurants from 'components/restaurants/Restaurants';
 
 const FlexBox = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-column-gap: 75px;
 `;
 
 
