@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import ReactDOM from "react-dom";
+import ReactTooltip from "react-tooltip";
 import styled from 'styled-components/macro';
 import ChatShell from 'components/chatShell/ChatShell';
 import Scheduler from 'containers/Scheduler';
@@ -7,6 +9,7 @@ import CarouselScreen from 'containers/CaraouselScreen'
 import 'components/carousel/Carousel.css';
 
 import { SCHEDULER_PATH,PAYMENT_PATH, CAROUSEL_PATH } from 'constants/routes';
+import MapChart from 'components/worldMap/WorldMap';
 
 const FlexBox = styled.div`
   display: flex;
@@ -21,7 +24,7 @@ type Props = IProps;
 
   const Home: React.FC<Props> = () => {
   const [chatShellIdentity, setChatShellIdentity] = useState(0);
-
+  const [content, setContent] = useState("");
   const handleChatShellIdentity = (num: React.SetStateAction<number>) => {
     setChatShellIdentity(num)
   }
@@ -62,13 +65,11 @@ type Props = IProps;
           selectedChatShell={chatShellIdentity} 
           identity={2}
         >
-        {
-          /**
-          * 
-          * custom component
-          */
-        }
+        <MapChart setTooltipContent={setContent} />
+        <ReactTooltip>{content}</ReactTooltip>
         </ChatShell>
+        <MapChart setTooltipContent={setContent} />
+        <ReactTooltip>{content}</ReactTooltip>
     </FlexBox>
   )
 };
